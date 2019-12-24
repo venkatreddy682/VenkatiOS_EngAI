@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoriesCell" rowHeight="74" id="HRG-Zv-jwu" customClass="StoriesCell" customModule="EngineerintAITask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HRG-Zv-jwu" id="Do0-eE-uRS">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-Ny-E8A">
+                        <rect key="frame" x="10" y="15" width="335" height="21"/>
+                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUx-bs-0fQ">
+                        <rect key="frame" x="355" y="23.5" width="51" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="AGW-KU-gj6"/>
+                            <constraint firstAttribute="height" constant="31" id="PW8-bE-zFP"/>
+                        </constraints>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="21" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-aJ-eKj">
+                        <rect key="frame" x="10" y="40" width="335" height="21"/>
+                        <fontDescription key="fontDescription" name="DevanagariSangamMN" family="Devanagari Sangam MN" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nxJ-aJ-eKj" secondAttribute="bottom" constant="17" id="5TF-gM-NW8"/>
+                    <constraint firstAttribute="trailing" secondItem="rUx-bs-0fQ" secondAttribute="trailing" constant="10" id="5eX-ee-dG5"/>
+                    <constraint firstItem="nxJ-aJ-eKj" firstAttribute="leading" secondItem="Do0-eE-uRS" secondAttribute="leading" constant="10" id="7el-jI-48f"/>
+                    <constraint firstItem="2pr-Ny-E8A" firstAttribute="leading" secondItem="Do0-eE-uRS" secondAttribute="leading" constant="10" id="8RM-Pq-pWp"/>
+                    <constraint firstItem="2pr-Ny-E8A" firstAttribute="top" secondItem="Do0-eE-uRS" secondAttribute="top" constant="15" id="OJf-qZ-f7y"/>
+                    <constraint firstItem="rUx-bs-0fQ" firstAttribute="leading" secondItem="nxJ-aJ-eKj" secondAttribute="trailing" constant="10" id="RqX-KW-7ty"/>
+                    <constraint firstItem="rUx-bs-0fQ" firstAttribute="centerY" secondItem="Do0-eE-uRS" secondAttribute="centerY" id="meF-75-ysc"/>
+                    <constraint firstItem="rUx-bs-0fQ" firstAttribute="leading" secondItem="2pr-Ny-E8A" secondAttribute="trailing" constant="10" id="tSL-Sb-L6s"/>
+                    <constraint firstItem="nxJ-aJ-eKj" firstAttribute="top" secondItem="2pr-Ny-E8A" secondAttribute="bottom" constant="4" id="xt2-p4-6yM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbl_createdDate" destination="nxJ-aJ-eKj" id="XPD-wF-0FV"/>
+                <outlet property="lbl_title" destination="2pr-Ny-E8A" id="tgR-Hu-GCa"/>
+                <outlet property="switch_toggle" destination="rUx-bs-0fQ" id="4tU-EG-UUT"/>
+            </connections>
+            <point key="canvasLocation" x="327.536231884058" y="50.892857142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
