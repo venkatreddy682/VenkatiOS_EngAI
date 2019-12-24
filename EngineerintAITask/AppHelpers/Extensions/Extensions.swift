@@ -10,6 +10,7 @@ import Foundation
 
 extension Date {
     
+    //get Formated Date method
     func getFormatedDate(dateString : String) -> String {
         
         let formatter = DateFormatter() //2019-12-24T10:46:16.000Z

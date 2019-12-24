@@ -12,6 +12,7 @@ class EngSharedManager: NSObject {
 
     static let sharedManager = EngSharedManager()
     
+    //ACtivity indicator method footer
     func setUpTableFooterIndicator(_ object : AnyObject) -> UIView {
         let controller = object as? UIViewController
         let activityView = UIView(frame: CGRect(x: 0, y: 0, width: (controller?.view.frame.size.width)!, height: controller?.navigationController?.navigationBar.frame.size.height ?? 0))
@@ -30,6 +31,7 @@ class EngSharedManager: NSObject {
         return activityView
     }
     
+    //Loader Indicator Method
     func showLoader(delegate : Any) {
         
         let vc = delegate as? UIViewController

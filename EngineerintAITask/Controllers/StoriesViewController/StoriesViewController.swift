@@ -19,6 +19,8 @@ class StoriesViewController: UIViewController {
     var selectedPostsArray = NSMutableArray()
     var refreshControl = UIRefreshControl()
     
+    //MARK:- VIEWDIDLOAD METHOD
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,11 +42,15 @@ class StoriesViewController: UIViewController {
         tableview_stories.addSubview(refreshControl)
     }
     
+    //MARK:- VIEWDIDAPPEAR METHOD
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.callStoriesWebService(pageNo: currentPage)
     }
 }
+
+//MARK:- CUSTOM METHODS
 
 extension StoriesViewController {
     
@@ -96,11 +102,12 @@ extension StoriesViewController {
     }
 }
 
+//MARK:- UITABLEVIEW DELEGATE AND DATASOURCE METHODS
 extension StoriesViewController : UITableViewDelegate , UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableListingArray.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "StoriesCell"
@@ -141,18 +148,14 @@ extension StoriesViewController : UITableViewDelegate , UITableViewDataSource {
                 cell?.switch_toggle.isOn = true
                 cell?.contentView.backgroundColor = TABLECELL_SELECTION_COLOR
             }
-            
             self.displaySelectedPostCount(selectedCount: selectedPostsArray.count)
-
         }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if indexPath.row == tableListingArray.count - 1 { //last row
-            
             if self.currentPage < self.totalPages - 1 { //more records to fetch
-                
                let footerView = EngSharedManager.sharedManager.setUpTableFooterIndicator(self)
                 tableview_stories.tableFooterView = footerView
                 storiesDataAccesslayer.isShowFooterIndicatorView = true
@@ -167,15 +170,14 @@ extension StoriesViewController : UITableViewDelegate , UITableViewDataSource {
     }
 }
 
+//MARK:- SERVICE CONNECTOR DELEGATE METHODS
 extension StoriesViewController : serviceConnectorDelegate {
     
     func serviceConnector(didReceiveResponse response: AnyObject) {
-        
         self.stopRefreshing()
-        
         if response is NSDictionary , let resposneDict = response as? NSDictionary {
             
-            print(resposneDict)
+           // print(resposneDict)
             //get total pages count
             if let allPagesCount = ENG_NULL_EMPTY(resposneDict.object(forKey: NB_PAGES) as AnyObject) as? Int {
                 totalPages = allPagesCount
@@ -194,6 +196,6 @@ extension StoriesViewController : serviceConnectorDelegate {
         }
     }
     func serviceConnector(didFailResponse response : AnyObject) {
-        
+       // print(response)
     }
 }

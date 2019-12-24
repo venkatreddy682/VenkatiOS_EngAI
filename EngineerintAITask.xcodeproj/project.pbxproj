@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260BCB3423B249D800B6F63D /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260BCB3323B249D800B6F63D /* StoryModel.swift */; };
 		26B5D51923B22CAD00E8B12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B5D51823B22CAD00E8B12A /* AppDelegate.swift */; };
 		26B5D51E23B22CAD00E8B12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B5D51C23B22CAD00E8B12A /* Main.storyboard */; };
 		26B5D52023B22CAD00E8B12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B5D51F23B22CAD00E8B12A /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		260BCB3323B249D800B6F63D /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		26B5D51523B22CAD00E8B12A /* EngineerintAITask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngineerintAITask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B5D51823B22CAD00E8B12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26B5D51D23B22CAD00E8B12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		26B5D54923B22D1000E8B12A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				260BCB3323B249D800B6F63D /* StoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				26B5D56023B22E2000E8B12A /* StoriesCell.swift in Sources */,
 				26B5D55B23B22DE400E8B12A /* StoriesDataAccessLayer.swift in Sources */,
 				26B5D55D23B22DF100E8B12A /* Extensions.swift in Sources */,
+				260BCB3423B249D800B6F63D /* StoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

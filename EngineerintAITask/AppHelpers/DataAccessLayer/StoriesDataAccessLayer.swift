@@ -14,7 +14,6 @@ class StoriesDataAccessLayer: ServiceConnector {
     }
     
     func getStoriesData(pageNo : String , delegate : Any) {
-        
         let urlString = SERVER_BASE_URL
         let params = "tags=story&page=\(pageNo)"
         self.initiateServiceCall(urlString: urlString, params: params, httpMethod: GET_METHOD, delegate: delegate)
